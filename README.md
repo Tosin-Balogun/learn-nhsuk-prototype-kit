@@ -1,4 +1,6 @@
-# NHS.UK prototype kit
+# NHS.UK prototype kit - Tosin's copy
+
+> Please note that this version of the nhsuk webkit is for my learning purposes only
 
 Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
 
