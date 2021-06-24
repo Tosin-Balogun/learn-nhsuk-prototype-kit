@@ -1,0 +1,117 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Error! We do not know which website or app you are trying to access
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+        {% from 'back-link/macro.njk' import backLink %}
+        {{ backLink({
+            "href": "/",
+            "text": "Back to: [relevant transaction]"
+          }) }}
+          
+        <h1 class="nhsuk-heading-l">Your video has failed to upload</h1>
+
+        <p class="nhsuk-heading-xs" style="color:#4c6272">Reference: CID4011</p>
+
+        <p class="nhsuk-body">
+          There may be a problem with your internet connection, or a technical problem on our side.
+        </p>
+
+        <h2 class="nhsuk-heading-m">
+          What you can do
+        </h2>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>You can try uploading your video another time.</li>
+          <li>Try using a different Wi-Fi connection if the one you are using does not work.</li>
+        </ul>
+
+        <button class="nhsuk-button" type="submit">
+          Try again
+        </button>
+
+        <p class="nhsuk-body">If that doesn't work, you can see more options to try in our help centre.</p>
+
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            
+            <h3 class="nhsuk-heading-s">More advice on the help centre</h3>
+            <a href="" class="nhsuk-link">Get advice on the help centre</a>
+            <p class="nhsuk-card__description">
+              help.login.nhs.uk
+            </p>
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}
