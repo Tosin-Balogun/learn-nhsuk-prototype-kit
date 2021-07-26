@@ -1,5 +1,5 @@
 # NHS.UK prototype kit
-> This is a demo version of the original prototype kit
+> This is a demo version of the original prototype kit. All files are for ideation purposes only.
 
 Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
 
